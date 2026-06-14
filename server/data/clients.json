@@ -1,1 +1,51 @@
-[]
+[
+  {
+    "id": "CLT-001",
+    "name": "Rajesh Mehta",
+    "aum": { "amount": 125000000, "currency": "INR" },
+    "returns": { "oneMonth": 2.4, "ytd": 8.7 },
+    "riskProfile": "Moderate"
+  },
+  {
+    "id": "CLT-002",
+    "name": "Priya Sharma",
+    "aum": { "amount": 280000000, "currency": "INR" },
+    "returns": { "oneMonth": 3.1, "ytd": 11.2 },
+    "riskProfile": "Aggressive"
+  },
+  {
+    "id": "CLT-003",
+    "name": "Anand Krishnan",
+    "aum": { "amount": 82000000, "currency": "INR" },
+    "returns": { "oneMonth": 0.9, "ytd": 4.5 },
+    "riskProfile": "Conservative"
+  },
+  {
+    "id": "CLT-004",
+    "name": "Meera Kapoor",
+    "aum": { "amount": 156000000, "currency": "INR" },
+    "returns": { "oneMonth": 1.8, "ytd": 6.3 },
+    "riskProfile": "Moderate"
+  },
+  {
+    "id": "CLT-005",
+    "name": "Vikram Singh",
+    "aum": { "amount": 2100000, "currency": "USD" },
+    "returns": { "oneMonth": 2.7, "ytd": 9.8 },
+    "riskProfile": "Aggressive"
+  },
+  {
+    "id": "CLT-006",
+    "name": "Divya Reddy",
+    "aum": { "amount": 64000000, "currency": "INR" },
+    "returns": { "oneMonth": 1.2, "ytd": 5.1 },
+    "riskProfile": "Conservative"
+  },
+  {
+    "id": "CLT-007",
+    "name": "Arjun Nair",
+    "aum": { "amount": 193000000, "currency": "INR" },
+    "returns": { "oneMonth": 2.0, "ytd": 7.4 },
+    "riskProfile": "Moderate"
+  }
+]

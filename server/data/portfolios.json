@@ -1,1 +1,696 @@
-{}
+{
+  "CLT-001": {
+    "rebalanceReviewed": false,
+    "allocation": [
+      {
+        "assetClass": "Equities",
+        "currentPct": 67,
+        "targetPct": 60
+      },
+      {
+        "assetClass": "Debt",
+        "currentPct": 18,
+        "targetPct": 25
+      },
+      {
+        "assetClass": "Gold",
+        "currentPct": 8,
+        "targetPct": 10
+      },
+      {
+        "assetClass": "Real Estate",
+        "currentPct": 4,
+        "targetPct": 3
+      },
+      {
+        "assetClass": "Alternatives",
+        "currentPct": 3,
+        "targetPct": 2
+      }
+    ],
+    "holdings": [
+      {
+        "instrument": "Reliance Industries",
+        "assetClass": "Equities",
+        "currentValue": 42000000,
+        "gainLoss": {
+          "inr": 1250000,
+          "pct": 3.1
+        },
+        "weightPct": 33.6
+      },
+      {
+        "instrument": "HDFC Bank",
+        "assetClass": "Equities",
+        "currentValue": 28000000,
+        "gainLoss": {
+          "inr": 840000,
+          "pct": 3.1
+        },
+        "weightPct": 22.4
+      },
+      {
+        "instrument": "Nifty 50 ETF",
+        "assetClass": "Equities",
+        "currentValue": 13750000,
+        "gainLoss": {
+          "inr": 412500,
+          "pct": 3.1
+        },
+        "weightPct": 11
+      },
+      {
+        "instrument": "SBI Magnum Gilt Fund",
+        "assetClass": "Debt",
+        "currentValue": 15000000,
+        "gainLoss": {
+          "inr": 180000,
+          "pct": 1.2
+        },
+        "weightPct": 12
+      },
+      {
+        "instrument": "HDFC Corporate Bond Fund",
+        "assetClass": "Debt",
+        "currentValue": 7500000,
+        "gainLoss": {
+          "inr": 90000,
+          "pct": 1.2
+        },
+        "weightPct": 6
+      },
+      {
+        "instrument": "Sovereign Gold Bond 2028",
+        "assetClass": "Gold",
+        "currentValue": 10000000,
+        "gainLoss": {
+          "inr": 320000,
+          "pct": 3.3
+        },
+        "weightPct": 8
+      },
+      {
+        "instrument": "Embassy REIT",
+        "assetClass": "Real Estate",
+        "currentValue": 5000000,
+        "gainLoss": {
+          "inr": 150000,
+          "pct": 3.1
+        },
+        "weightPct": 4
+      },
+      {
+        "instrument": "Edelweiss AIF",
+        "assetClass": "Alternatives",
+        "currentValue": 3750000,
+        "gainLoss": {
+          "inr": 75000,
+          "pct": 2
+        },
+        "weightPct": 3
+      }
+    ]
+  },
+  "CLT-002": {
+    "rebalanceReviewed": false,
+    "allocation": [
+      {
+        "assetClass": "Equities",
+        "currentPct": 68,
+        "targetPct": 75
+      },
+      {
+        "assetClass": "Debt",
+        "currentPct": 12,
+        "targetPct": 10
+      },
+      {
+        "assetClass": "Gold",
+        "currentPct": 8,
+        "targetPct": 5
+      },
+      {
+        "assetClass": "Real Estate",
+        "currentPct": 5,
+        "targetPct": 5
+      },
+      {
+        "assetClass": "Alternatives",
+        "currentPct": 7,
+        "targetPct": 5
+      }
+    ],
+    "holdings": [
+      {
+        "instrument": "TCS",
+        "assetClass": "Equities",
+        "currentValue": 95200000,
+        "gainLoss": {
+          "inr": 2856000,
+          "pct": 3.1
+        },
+        "weightPct": 34
+      },
+      {
+        "instrument": "Infosys",
+        "assetClass": "Equities",
+        "currentValue": 67200000,
+        "gainLoss": {
+          "inr": 2016000,
+          "pct": 3.1
+        },
+        "weightPct": 24
+      },
+      {
+        "instrument": "Axis Bluechip Fund",
+        "assetClass": "Equities",
+        "currentValue": 28000000,
+        "gainLoss": {
+          "inr": 840000,
+          "pct": 3.1
+        },
+        "weightPct": 10
+      },
+      {
+        "instrument": "ICICI Pru Corporate Bond",
+        "assetClass": "Debt",
+        "currentValue": 33600000,
+        "gainLoss": {
+          "inr": 403200,
+          "pct": 1.2
+        },
+        "weightPct": 12
+      },
+      {
+        "instrument": "Sovereign Gold Bond 2029",
+        "assetClass": "Gold",
+        "currentValue": 22400000,
+        "gainLoss": {
+          "inr": 716800,
+          "pct": 3.3
+        },
+        "weightPct": 8
+      },
+      {
+        "instrument": "Mindspace REIT",
+        "assetClass": "Real Estate",
+        "currentValue": 14000000,
+        "gainLoss": {
+          "inr": 420000,
+          "pct": 3.1
+        },
+        "weightPct": 5
+      },
+      {
+        "instrument": "Motilal Oswal PMS",
+        "assetClass": "Alternatives",
+        "currentValue": 19600000,
+        "gainLoss": {
+          "inr": 392000,
+          "pct": 2
+        },
+        "weightPct": 7
+      }
+    ]
+  },
+  "CLT-003": {
+    "rebalanceReviewed": false,
+    "allocation": [
+      {
+        "assetClass": "Equities",
+        "currentPct": 35,
+        "targetPct": 35
+      },
+      {
+        "assetClass": "Debt",
+        "currentPct": 45,
+        "targetPct": 45
+      },
+      {
+        "assetClass": "Gold",
+        "currentPct": 12,
+        "targetPct": 12
+      },
+      {
+        "assetClass": "Real Estate",
+        "currentPct": 5,
+        "targetPct": 5
+      },
+      {
+        "assetClass": "Alternatives",
+        "currentPct": 3,
+        "targetPct": 3
+      }
+    ],
+    "holdings": [
+      {
+        "instrument": "HDFC Balanced Advantage",
+        "assetClass": "Equities",
+        "currentValue": 28700000,
+        "gainLoss": {
+          "inr": 574000,
+          "pct": 2
+        },
+        "weightPct": 35
+      },
+      {
+        "instrument": "SBI Dynamic Bond Fund",
+        "assetClass": "Debt",
+        "currentValue": 36900000,
+        "gainLoss": {
+          "inr": 295200,
+          "pct": 0.8
+        },
+        "weightPct": 45
+      },
+      {
+        "instrument": "Sovereign Gold Bond 2027",
+        "assetClass": "Gold",
+        "currentValue": 9840000,
+        "gainLoss": {
+          "inr": 295200,
+          "pct": 3.1
+        },
+        "weightPct": 12
+      },
+      {
+        "instrument": "Brookfield India REIT",
+        "assetClass": "Real Estate",
+        "currentValue": 4100000,
+        "gainLoss": {
+          "inr": 123000,
+          "pct": 3.1
+        },
+        "weightPct": 5
+      },
+      {
+        "instrument": "IIFL Special Opportunities",
+        "assetClass": "Alternatives",
+        "currentValue": 2460000,
+        "gainLoss": {
+          "inr": 49200,
+          "pct": 2
+        },
+        "weightPct": 3
+      }
+    ]
+  },
+  "CLT-004": {
+    "rebalanceReviewed": false,
+    "allocation": [
+      {
+        "assetClass": "Equities",
+        "currentPct": 58,
+        "targetPct": 55
+      },
+      {
+        "assetClass": "Debt",
+        "currentPct": 22,
+        "targetPct": 30
+      },
+      {
+        "assetClass": "Gold",
+        "currentPct": 12,
+        "targetPct": 10
+      },
+      {
+        "assetClass": "Real Estate",
+        "currentPct": 5,
+        "targetPct": 3
+      },
+      {
+        "assetClass": "Alternatives",
+        "currentPct": 3,
+        "targetPct": 2
+      }
+    ],
+    "holdings": [
+      {
+        "instrument": "ICICI Bank",
+        "assetClass": "Equities",
+        "currentValue": 46800000,
+        "gainLoss": {
+          "inr": 1404000,
+          "pct": 3.1
+        },
+        "weightPct": 30
+      },
+      {
+        "instrument": "Bajaj Finance",
+        "assetClass": "Equities",
+        "currentValue": 43680000,
+        "gainLoss": {
+          "inr": 1310400,
+          "pct": 3.1
+        },
+        "weightPct": 28
+      },
+      {
+        "instrument": "UTI Nifty Index Fund",
+        "assetClass": "Equities",
+        "currentValue": 31200000,
+        "gainLoss": {
+          "inr": 936000,
+          "pct": 3.1
+        },
+        "weightPct": 20
+      },
+      {
+        "instrument": "Kotak Bond Short Term",
+        "assetClass": "Debt",
+        "currentValue": 21840000,
+        "gainLoss": {
+          "inr": 262080,
+          "pct": 1.2
+        },
+        "weightPct": 14
+      },
+      {
+        "instrument": "Nippon India Gilt Fund",
+        "assetClass": "Debt",
+        "currentValue": 12480000,
+        "gainLoss": {
+          "inr": 149760,
+          "pct": 1.2
+        },
+        "weightPct": 8
+      },
+      {
+        "instrument": "Sovereign Gold Bond 2030",
+        "assetClass": "Gold",
+        "currentValue": 18720000,
+        "gainLoss": {
+          "inr": 599040,
+          "pct": 3.3
+        },
+        "weightPct": 12
+      },
+      {
+        "instrument": "Nexus Select Trust REIT",
+        "assetClass": "Real Estate",
+        "currentValue": 7800000,
+        "gainLoss": {
+          "inr": 234000,
+          "pct": 3.1
+        },
+        "weightPct": 5
+      },
+      {
+        "instrument": "Abakkus AIF",
+        "assetClass": "Alternatives",
+        "currentValue": 4680000,
+        "gainLoss": {
+          "inr": 93600,
+          "pct": 2
+        },
+        "weightPct": 3
+      }
+    ]
+  },
+  "CLT-005": {
+    "rebalanceReviewed": false,
+    "allocation": [
+      {
+        "assetClass": "Equities",
+        "currentPct": 72,
+        "targetPct": 70
+      },
+      {
+        "assetClass": "Debt",
+        "currentPct": 5,
+        "targetPct": 8
+      },
+      {
+        "assetClass": "Gold",
+        "currentPct": 18,
+        "targetPct": 10
+      },
+      {
+        "assetClass": "Real Estate",
+        "currentPct": 3,
+        "targetPct": 7
+      },
+      {
+        "assetClass": "Alternatives",
+        "currentPct": 2,
+        "targetPct": 5
+      }
+    ],
+    "holdings": [
+      {
+        "instrument": "Apple Inc",
+        "assetClass": "Equities",
+        "currentValue": 756000,
+        "gainLoss": {
+          "inr": 45360,
+          "pct": 6.4
+        },
+        "weightPct": 36
+      },
+      {
+        "instrument": "Microsoft Corp",
+        "assetClass": "Equities",
+        "currentValue": 504000,
+        "gainLoss": {
+          "inr": 30240,
+          "pct": 6.4
+        },
+        "weightPct": 24
+      },
+      {
+        "instrument": "Alphabet Inc",
+        "assetClass": "Equities",
+        "currentValue": 252000,
+        "gainLoss": {
+          "inr": 15120,
+          "pct": 6.4
+        },
+        "weightPct": 12
+      },
+      {
+        "instrument": "US Treasury ETF",
+        "assetClass": "Debt",
+        "currentValue": 105000,
+        "gainLoss": {
+          "inr": 840,
+          "pct": 0.8
+        },
+        "weightPct": 5
+      },
+      {
+        "instrument": "SPDR Gold Shares",
+        "assetClass": "Gold",
+        "currentValue": 378000,
+        "gainLoss": {
+          "inr": 11340,
+          "pct": 3.1
+        },
+        "weightPct": 18
+      },
+      {
+        "instrument": "Prologis REIT",
+        "assetClass": "Real Estate",
+        "currentValue": 63000,
+        "gainLoss": {
+          "inr": 1890,
+          "pct": 3.1
+        },
+        "weightPct": 3
+      },
+      {
+        "instrument": "Blackstone Private Equity",
+        "assetClass": "Alternatives",
+        "currentValue": 42000,
+        "gainLoss": {
+          "inr": 840,
+          "pct": 2
+        },
+        "weightPct": 2
+      }
+    ]
+  },
+  "CLT-006": {
+    "rebalanceReviewed": false,
+    "allocation": [
+      {
+        "assetClass": "Equities",
+        "currentPct": 32,
+        "targetPct": 30
+      },
+      {
+        "assetClass": "Debt",
+        "currentPct": 48,
+        "targetPct": 50
+      },
+      {
+        "assetClass": "Gold",
+        "currentPct": 12,
+        "targetPct": 12
+      },
+      {
+        "assetClass": "Real Estate",
+        "currentPct": 5,
+        "targetPct": 5
+      },
+      {
+        "assetClass": "Alternatives",
+        "currentPct": 3,
+        "targetPct": 3
+      }
+    ],
+    "holdings": [
+      {
+        "instrument": "SBI Bluechip Fund",
+        "assetClass": "Equities",
+        "currentValue": 20480000,
+        "gainLoss": {
+          "inr": 409600,
+          "pct": 2
+        },
+        "weightPct": 32
+      },
+      {
+        "instrument": "HDFC Short Term Debt",
+        "assetClass": "Debt",
+        "currentValue": 30720000,
+        "gainLoss": {
+          "inr": 245760,
+          "pct": 0.8
+        },
+        "weightPct": 48
+      },
+      {
+        "instrument": "Sovereign Gold Bond 2026",
+        "assetClass": "Gold",
+        "currentValue": 7680000,
+        "gainLoss": {
+          "inr": 230400,
+          "pct": 3.1
+        },
+        "weightPct": 12
+      },
+      {
+        "instrument": "IndiGrid InvIT",
+        "assetClass": "Real Estate",
+        "currentValue": 3200000,
+        "gainLoss": {
+          "inr": 96000,
+          "pct": 3.1
+        },
+        "weightPct": 5
+      },
+      {
+        "instrument": "True Beacon AIF",
+        "assetClass": "Alternatives",
+        "currentValue": 1920000,
+        "gainLoss": {
+          "inr": 38400,
+          "pct": 2
+        },
+        "weightPct": 3
+      }
+    ]
+  },
+  "CLT-007": {
+    "rebalanceReviewed": false,
+    "allocation": [
+      {
+        "assetClass": "Equities",
+        "currentPct": 52,
+        "targetPct": 55
+      },
+      {
+        "assetClass": "Debt",
+        "currentPct": 23,
+        "targetPct": 25
+      },
+      {
+        "assetClass": "Gold",
+        "currentPct": 8,
+        "targetPct": 10
+      },
+      {
+        "assetClass": "Real Estate",
+        "currentPct": 12,
+        "targetPct": 5
+      },
+      {
+        "assetClass": "Alternatives",
+        "currentPct": 5,
+        "targetPct": 5
+      }
+    ],
+    "holdings": [
+      {
+        "instrument": "Asian Paints",
+        "assetClass": "Equities",
+        "currentValue": 50180000,
+        "gainLoss": {
+          "inr": 1505400,
+          "pct": 3.1
+        },
+        "weightPct": 26
+      },
+      {
+        "instrument": "Larsen & Toubro",
+        "assetClass": "Equities",
+        "currentValue": 50180000,
+        "gainLoss": {
+          "inr": 1505400,
+          "pct": 3.1
+        },
+        "weightPct": 26
+      },
+      {
+        "instrument": "Mirae Asset Large Cap",
+        "assetClass": "Equities",
+        "currentValue": 38600000,
+        "gainLoss": {
+          "inr": 1158000,
+          "pct": 3.1
+        },
+        "weightPct": 20
+      },
+      {
+        "instrument": "ICICI Pru Gilt Fund",
+        "assetClass": "Debt",
+        "currentValue": 44390000,
+        "gainLoss": {
+          "inr": 532680,
+          "pct": 1.2
+        },
+        "weightPct": 23
+      },
+      {
+        "instrument": "Sovereign Gold Bond 2031",
+        "assetClass": "Gold",
+        "currentValue": 15440000,
+        "gainLoss": {
+          "inr": 494080,
+          "pct": 3.3
+        },
+        "weightPct": 8
+      },
+      {
+        "instrument": "Prestige Estates REIT",
+        "assetClass": "Real Estate",
+        "currentValue": 23160000,
+        "gainLoss": {
+          "inr": 694800,
+          "pct": 3.1
+        },
+        "weightPct": 12
+      },
+      {
+        "instrument": "IIFL Wealth AIF",
+        "assetClass": "Alternatives",
+        "currentValue": 9650000,
+        "gainLoss": {
+          "inr": 193000,
+          "pct": 2
+        },
+        "weightPct": 5
+      }
+    ]
+  }
+}

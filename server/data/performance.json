@@ -1,1 +1,247 @@
-{}
+{
+  "CLT-001": {
+    "benchmarkLabel": "Nifty 50",
+    "points": [
+      {
+        "date": "2025-12-01",
+        "portfolioValue": 118000000,
+        "benchmarkValue": 116500000
+      },
+      {
+        "date": "2026-01-01",
+        "portfolioValue": 120500000,
+        "benchmarkValue": 118800000
+      },
+      {
+        "date": "2026-02-01",
+        "portfolioValue": 121800000,
+        "benchmarkValue": 119900000
+      },
+      {
+        "date": "2026-03-01",
+        "portfolioValue": 123100000,
+        "benchmarkValue": 121200000
+      },
+      {
+        "date": "2026-04-01",
+        "portfolioValue": 124200000,
+        "benchmarkValue": 122400000
+      },
+      {
+        "date": "2026-05-01",
+        "portfolioValue": 125000000,
+        "benchmarkValue": 123100000
+      }
+    ]
+  },
+  "CLT-002": {
+    "benchmarkLabel": "Nifty 50",
+    "points": [
+      {
+        "date": "2025-12-01",
+        "portfolioValue": 265000000,
+        "benchmarkValue": 262000000
+      },
+      {
+        "date": "2026-01-01",
+        "portfolioValue": 270000000,
+        "benchmarkValue": 266500000
+      },
+      {
+        "date": "2026-02-01",
+        "portfolioValue": 273500000,
+        "benchmarkValue": 269000000
+      },
+      {
+        "date": "2026-03-01",
+        "portfolioValue": 276000000,
+        "benchmarkValue": 271500000
+      },
+      {
+        "date": "2026-04-01",
+        "portfolioValue": 278500000,
+        "benchmarkValue": 274000000
+      },
+      {
+        "date": "2026-05-01",
+        "portfolioValue": 280000000,
+        "benchmarkValue": 276500000
+      }
+    ]
+  },
+  "CLT-003": {
+    "benchmarkLabel": "Nifty 50",
+    "points": [
+      {
+        "date": "2025-12-01",
+        "portfolioValue": 79000000,
+        "benchmarkValue": 78800000
+      },
+      {
+        "date": "2026-01-01",
+        "portfolioValue": 79800000,
+        "benchmarkValue": 79400000
+      },
+      {
+        "date": "2026-02-01",
+        "portfolioValue": 80400000,
+        "benchmarkValue": 79900000
+      },
+      {
+        "date": "2026-03-01",
+        "portfolioValue": 81000000,
+        "benchmarkValue": 80400000
+      },
+      {
+        "date": "2026-04-01",
+        "portfolioValue": 81600000,
+        "benchmarkValue": 80900000
+      },
+      {
+        "date": "2026-05-01",
+        "portfolioValue": 82000000,
+        "benchmarkValue": 81300000
+      }
+    ]
+  },
+  "CLT-004": {
+    "benchmarkLabel": "Nifty 50",
+    "points": [
+      {
+        "date": "2025-12-01",
+        "portfolioValue": 148000000,
+        "benchmarkValue": 146500000
+      },
+      {
+        "date": "2026-01-01",
+        "portfolioValue": 150000000,
+        "benchmarkValue": 148200000
+      },
+      {
+        "date": "2026-02-01",
+        "portfolioValue": 151800000,
+        "benchmarkValue": 149600000
+      },
+      {
+        "date": "2026-03-01",
+        "portfolioValue": 153200000,
+        "benchmarkValue": 150900000
+      },
+      {
+        "date": "2026-04-01",
+        "portfolioValue": 154800000,
+        "benchmarkValue": 152300000
+      },
+      {
+        "date": "2026-05-01",
+        "portfolioValue": 156000000,
+        "benchmarkValue": 153500000
+      }
+    ]
+  },
+  "CLT-005": {
+    "benchmarkLabel": "S&P 500",
+    "points": [
+      {
+        "date": "2025-12-01",
+        "portfolioValue": 1980000,
+        "benchmarkValue": 1960000
+      },
+      {
+        "date": "2026-01-01",
+        "portfolioValue": 2010000,
+        "benchmarkValue": 1985000
+      },
+      {
+        "date": "2026-02-01",
+        "portfolioValue": 2035000,
+        "benchmarkValue": 2008000
+      },
+      {
+        "date": "2026-03-01",
+        "portfolioValue": 2055000,
+        "benchmarkValue": 2029000
+      },
+      {
+        "date": "2026-04-01",
+        "portfolioValue": 2080000,
+        "benchmarkValue": 2051000
+      },
+      {
+        "date": "2026-05-01",
+        "portfolioValue": 2100000,
+        "benchmarkValue": 2072000
+      }
+    ]
+  },
+  "CLT-006": {
+    "benchmarkLabel": "Nifty 50",
+    "points": [
+      {
+        "date": "2025-12-01",
+        "portfolioValue": 61500000,
+        "benchmarkValue": 61300000
+      },
+      {
+        "date": "2026-01-01",
+        "portfolioValue": 62100000,
+        "benchmarkValue": 61800000
+      },
+      {
+        "date": "2026-02-01",
+        "portfolioValue": 62600000,
+        "benchmarkValue": 62200000
+      },
+      {
+        "date": "2026-03-01",
+        "portfolioValue": 63100000,
+        "benchmarkValue": 62600000
+      },
+      {
+        "date": "2026-04-01",
+        "portfolioValue": 63600000,
+        "benchmarkValue": 63000000
+      },
+      {
+        "date": "2026-05-01",
+        "portfolioValue": 64000000,
+        "benchmarkValue": 63300000
+      }
+    ]
+  },
+  "CLT-007": {
+    "benchmarkLabel": "Nifty 50",
+    "points": [
+      {
+        "date": "2025-12-01",
+        "portfolioValue": 182000000,
+        "benchmarkValue": 180500000
+      },
+      {
+        "date": "2026-01-01",
+        "portfolioValue": 185000000,
+        "benchmarkValue": 182800000
+      },
+      {
+        "date": "2026-02-01",
+        "portfolioValue": 187500000,
+        "benchmarkValue": 184900000
+      },
+      {
+        "date": "2026-03-01",
+        "portfolioValue": 189500000,
+        "benchmarkValue": 186700000
+      },
+      {
+        "date": "2026-04-01",
+        "portfolioValue": 191500000,
+        "benchmarkValue": 188600000
+      },
+      {
+        "date": "2026-05-01",
+        "portfolioValue": 193000000,
+        "benchmarkValue": 190200000
+      }
+    ]
+  }
+}
