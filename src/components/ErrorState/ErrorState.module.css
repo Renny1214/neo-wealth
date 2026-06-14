@@ -1,0 +1,15 @@
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  min-height: 12rem;
+  text-align: center;
+}
+
+.message {
+  color: var(--color-danger);
+  margin: 0;
+  max-width: 28rem;
+}

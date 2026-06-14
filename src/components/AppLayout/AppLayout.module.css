@@ -1,0 +1,31 @@
+.layout {
+  min-height: 100vh;
+}
+
+.topBar {
+  align-items: center;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.brand {
+  color: var(--color-text);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.tagline {
+  color: var(--color-muted-text);
+  font-size: 0.875rem;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1.5rem;
+  width: 100%;
+}
