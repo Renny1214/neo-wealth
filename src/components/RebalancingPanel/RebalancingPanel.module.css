@@ -1,0 +1,35 @@
+.header {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.message {
+  color: var(--color-muted-text);
+  font-size: 0.875rem;
+  margin: 0 0 1rem;
+}
+
+.driftList {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.driftList li {
+  align-items: center;
+  color: var(--color-text);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  gap: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}

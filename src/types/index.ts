@@ -3,6 +3,7 @@ export type {
   AllocationItem,
   AssetClass,
   DriftItem,
+  GainLoss,
   Holding,
   PerformancePoint,
   PerformanceSeries,
