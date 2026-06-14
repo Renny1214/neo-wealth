@@ -1,14 +1,27 @@
 import type { AssetClass } from '@/types'
 
-export const ASSET_CLASS_COLORS: Record<AssetClass, string> = {
-  Equities: '#1d4ed8',
-  Debt: '#059669',
-  Gold: '#d97706',
-  'Real Estate': '#7c3aed',
-  Alternatives: '#db2777',
+const ASSET_CLASS_VARS: Record<AssetClass, string> = {
+  Equities: '--chart-equities',
+  Debt: '--chart-debt',
+  Gold: '--chart-gold',
+  'Real Estate': '--chart-real-estate',
+  Alternatives: '--chart-alternatives',
 }
 
-export const CHART_LINE_COLORS = {
-  portfolio: '#1d4ed8',
-  benchmark: '#94a3b8',
+const LINE_VARS = {
+  portfolio: '--chart-line-portfolio',
+  benchmark: '--chart-line-benchmark',
+  grid: '--chart-grid',
 } as const
+
+function readThemeVar(name: string): string {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim()
+}
+
+export function getAssetClassColor(assetClass: AssetClass): string {
+  return readThemeVar(ASSET_CLASS_VARS[assetClass])
+}
+
+export function getChartLineColor(key: keyof typeof LINE_VARS): string {
+  return readThemeVar(LINE_VARS[key])
+}

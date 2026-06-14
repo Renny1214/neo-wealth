@@ -1,0 +1,57 @@
+/**
+ * Portfolio Pulse — single theme source of truth.
+ * Update values here to change the app-wide look (including charts via CSS vars).
+ * Future: add [data-theme="dark"] { ... } overrides for dark mode.
+ */
+
+:root {
+  /* Base palette */
+  --color-text: #0f172a;
+  --color-muted-text: #64748b;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-on-primary: #ffffff;
+
+  /* Brand & semantic */
+  --color-primary: #1d4ed8;
+  --color-primary-hover: #1e40af;
+  --color-success: #15803d;
+  --color-danger: #b91c1c;
+  --color-muted-bg: #f1f5f9;
+
+  /* Badge tones */
+  --color-badge-warning-bg: #fef3c7;
+  --color-badge-warning-text: #92400e;
+  --color-badge-success-bg: #dcfce7;
+  --color-badge-success-text: #166534;
+  --color-badge-danger-bg: #fee2e2;
+  --color-badge-danger-text: #991b1b;
+
+  /* Chart — asset allocation */
+  --chart-equities: #1d4ed8;
+  --chart-debt: #059669;
+  --chart-gold: #d97706;
+  --chart-real-estate: #7c3aed;
+  --chart-alternatives: #db2777;
+
+  /* Chart — performance lines */
+  --chart-line-portfolio: #1d4ed8;
+  --chart-line-benchmark: #94a3b8;
+  --chart-grid: #e2e8f0;
+
+  /* Effects */
+  --focus-ring: 0 0 0 3px rgba(29, 78, 216, 0.35);
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+
+  /* Typography (extend for future theming) */
+  --font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+}
+[data-theme="dark"] {
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+  /* ... */
+}

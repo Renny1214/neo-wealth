@@ -7,7 +7,7 @@ import {
   Tooltip,
 } from 'recharts'
 import type { AllocationItem } from '@/types'
-import { ASSET_CLASS_COLORS } from '@/constants/chartTheme'
+import { getAssetClassColor } from '@/constants/chartTheme'
 import { SectionTitle } from '@/components/SectionTitle'
 import { formatWeight } from '@/utils/portfolioFormatters'
 import styles from './AssetAllocationChart.module.css'
@@ -37,7 +37,7 @@ export function AssetAllocationChart({ allocation }: AssetAllocationChartProps) 
               paddingAngle={2}
             >
               {allocation.map((item) => (
-                <Cell key={item.assetClass} fill={ASSET_CLASS_COLORS[item.assetClass]} />
+                <Cell key={item.assetClass} fill={getAssetClassColor(item.assetClass)} />
               ))}
             </Pie>
             <Tooltip formatter={(value) => formatWeight(Number(value))} />

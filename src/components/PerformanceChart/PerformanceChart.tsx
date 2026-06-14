@@ -9,7 +9,7 @@ import {
   YAxis,
 } from 'recharts'
 import type { PerformanceSeries } from '@/types'
-import { CHART_LINE_COLORS } from '@/constants/chartTheme'
+import { getChartLineColor } from '@/constants/chartTheme'
 import { SectionTitle } from '@/components/SectionTitle'
 import { formatChartDate, formatCompactInr } from '@/utils/portfolioFormatters'
 import styles from './PerformanceChart.module.css'
@@ -34,7 +34,7 @@ export function PerformanceChart({ series }: PerformanceChartProps) {
       <div className={styles.chart} role="img" aria-label={`Line chart of portfolio versus ${series.benchmarkLabel}`}>
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={chartData}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+            <CartesianGrid strokeDasharray="3 3" stroke={getChartLineColor('grid')} />
             <XAxis dataKey="date" tick={{ fontSize: 12 }} />
             <YAxis tickFormatter={formatCompactInr} width={72} tick={{ fontSize: 12 }} />
             <Tooltip formatter={(value) => formatCompactInr(Number(value))} />
@@ -43,7 +43,7 @@ export function PerformanceChart({ series }: PerformanceChartProps) {
               type="monotone"
               dataKey="portfolio"
               name="Portfolio"
-              stroke={CHART_LINE_COLORS.portfolio}
+              stroke={getChartLineColor('portfolio')}
               strokeWidth={2}
               dot={false}
             />
@@ -51,7 +51,7 @@ export function PerformanceChart({ series }: PerformanceChartProps) {
               type="monotone"
               dataKey="benchmark"
               name={series.benchmarkLabel}
-              stroke={CHART_LINE_COLORS.benchmark}
+              stroke={getChartLineColor('benchmark')}
               strokeWidth={2}
               dot={false}
             />

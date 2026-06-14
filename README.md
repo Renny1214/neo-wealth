@@ -207,6 +207,12 @@ npm run lint        # ESLint (JS/TS config)
 
 ---
 
+## For AI assistants
+
+Architecture, conventions, and agent guidelines: [`CLAUDE.md`](CLAUDE.md) (Claude Code auto-load) and [`docs/CODEBASE_CONTEXT.md`](docs/CODEBASE_CONTEXT.md).
+
+---
+
 ## License
 
 Private — case study submission.
