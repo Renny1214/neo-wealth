@@ -11,12 +11,22 @@ export class ApiError extends Error {
 }
 
 export async function requestJson<T>(url: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(url, init)
+  let response: Response
+
+  try {
+    response = await fetch(url, init)
+  } catch {
+    throw new ApiError(0, 'Network error. Check your connection and try again.')
+  }
 
   if (!response.ok) {
     const errorBody = (await response.json().catch(() => null)) as ApiErrorBody | null
     throw new ApiError(response.status, errorBody?.message ?? response.statusText)
   }
 
-  return response.json() as Promise<T>
+  try {
+    return (await response.json()) as T
+  } catch {
+    throw new ApiError(response.status, 'Received an invalid response from the server.')
+  }
 }

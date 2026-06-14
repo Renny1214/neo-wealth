@@ -31,7 +31,7 @@ export function PerformanceChart({ series }: PerformanceChartProps) {
         title="Performance"
         subtitle={`6-month portfolio value vs ${series.benchmarkLabel}`}
       />
-      <div className={styles.chart}>
+      <div className={styles.chart} role="img" aria-label={`Line chart of portfolio versus ${series.benchmarkLabel}`}>
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={chartData}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />

@@ -4,6 +4,6 @@ import { clientApi } from '@/api/clientApi'
 export function useClients() {
   return useQuery({
     queryKey: ['clients'],
-    queryFn: clientApi.getClients,
+    queryFn: ({ signal }) => clientApi.getClients({ signal }),
   })
 }

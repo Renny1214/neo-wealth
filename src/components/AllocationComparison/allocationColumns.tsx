@@ -1,14 +1,18 @@
 import type { AllocationItem } from '@/types'
 import { Badge } from '@/components/Badge'
 import type { TableColumn } from '@/components/Table'
+import { DRIFT_THRESHOLD_PP } from '@/constants/rebalancing'
 import { formatWeight } from '@/utils/portfolioFormatters'
-
-const DRIFT_THRESHOLD = 5
 
 function renderDriftCell(item: AllocationItem) {
   const drift = Number((item.currentPct - item.targetPct).toFixed(1))
-  if (Math.abs(drift) <= DRIFT_THRESHOLD) {
-    return <span>{drift > 0 ? '+' : ''}{drift.toFixed(1)}pp</span>
+  if (Math.abs(drift) <= DRIFT_THRESHOLD_PP) {
+    return (
+      <span>
+        {drift > 0 ? '+' : ''}
+        {drift.toFixed(1)}pp
+      </span>
+    )
   }
 
   const tone = drift > 0 ? 'warning' : 'danger'
@@ -20,7 +24,7 @@ function renderDriftCell(item: AllocationItem) {
   )
 }
 
-export const allocationColumns: TableColumn<AllocationItem>[] = [
+const allocationColumns: TableColumn<AllocationItem>[] = [
   {
     id: 'assetClass',
     header: 'Asset Class',
@@ -45,3 +49,5 @@ export const allocationColumns: TableColumn<AllocationItem>[] = [
     cell: renderDriftCell,
   },
 ]
+
+export { allocationColumns }

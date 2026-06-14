@@ -23,5 +23,10 @@
 
 .select:focus {
   border-color: var(--color-primary);
-  outline: none;
+}
+
+.select:focus-visible {
+  box-shadow: var(--focus-ring);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }

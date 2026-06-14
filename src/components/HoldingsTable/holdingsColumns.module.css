@@ -1,7 +1,7 @@
 .positive {
-  color: #15803d;
+  color: var(--color-success);
 }
 
 .negative {
-  color: #b91c1c;
+  color: var(--color-danger);
 }

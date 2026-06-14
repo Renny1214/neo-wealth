@@ -1,12 +1,23 @@
 import type { RebalanceResponse } from '../../src/types/api.js'
-import { getClientRecord, markRebalanceReviewed } from '../data/dataStore.js'
+import {
+  getClientRecord,
+  getPortfolioRecord,
+  markRebalanceReviewed,
+} from '../data/dataStore.js'
 
-export function reviewRebalance(clientId: string): RebalanceResponse | undefined {
-  const client = getClientRecord(clientId)
-  if (!client) return undefined
+export type ReviewRebalanceResult =
+  | { ok: true; data: RebalanceResponse }
+  | { ok: false; reason: 'client_not_found' | 'portfolio_not_found' }
 
-  const updated = markRebalanceReviewed(clientId)
-  if (!updated) return undefined
+export function reviewRebalance(clientId: string): ReviewRebalanceResult {
+  if (!getClientRecord(clientId)) {
+    return { ok: false, reason: 'client_not_found' }
+  }
 
-  return { clientId, rebalanceReviewed: true }
+  if (!getPortfolioRecord(clientId)) {
+    return { ok: false, reason: 'portfolio_not_found' }
+  }
+
+  markRebalanceReviewed(clientId)
+  return { ok: true, data: { clientId, rebalanceReviewed: true } }
 }

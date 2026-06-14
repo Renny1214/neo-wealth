@@ -15,6 +15,7 @@ export function AllocationComparison({ allocation }: AllocationComparisonProps) 
         subtitle="Allocation drift by asset class"
       />
       <Table
+        caption="Current versus target allocation by asset class"
         columns={allocationColumns}
         rows={allocation}
         getRowKey={(row) => row.assetClass}

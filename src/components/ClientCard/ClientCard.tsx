@@ -4,15 +4,20 @@ import { AlertBadge } from '@/components/AlertBadge'
 import { Card } from '@/components/Card'
 import { RiskProfileBadge } from '@/components/RiskProfileBadge'
 import { formatAum, formatPercent } from '@/utils/formatters'
+import { getGainLossClass } from '@/utils/portfolioFormatters'
 import styles from './ClientCard.module.css'
 
 interface ClientCardProps {
   client: ClientSummary
 }
 
+function returnClassName(value: number): string {
+  return styles[getGainLossClass(value)]
+}
+
 export function ClientCard({ client }: ClientCardProps) {
   return (
-    <Link to={`/clients/${client.id}`} className={styles.link}>
+    <Link to={`/clients/${client.id}`} className={styles.link} aria-label={`View portfolio for ${client.name}`}>
       <Card className={styles.card}>
         <div className={styles.header}>
           <div>
@@ -29,11 +34,15 @@ export function ClientCard({ client }: ClientCardProps) {
           </div>
           <div className={styles.metric}>
             <dt>1M Return</dt>
-            <dd className={styles.positive}>{formatPercent(client.returns.oneMonth)}</dd>
+            <dd className={returnClassName(client.returns.oneMonth)}>
+              {formatPercent(client.returns.oneMonth)}
+            </dd>
           </div>
           <div className={styles.metric}>
             <dt>YTD Return</dt>
-            <dd className={styles.positive}>{formatPercent(client.returns.ytd)}</dd>
+            <dd className={returnClassName(client.returns.ytd)}>
+              {formatPercent(client.returns.ytd)}
+            </dd>
           </div>
           <div className={styles.metric}>
             <dt>Risk Profile</dt>

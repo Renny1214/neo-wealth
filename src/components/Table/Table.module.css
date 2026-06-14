@@ -2,6 +2,14 @@
   overflow-x: auto;
 }
 
+.caption {
+  caption-side: top;
+  color: var(--color-muted-text);
+  font-size: 0.8125rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
 .table {
   border-collapse: collapse;
   min-width: 100%;

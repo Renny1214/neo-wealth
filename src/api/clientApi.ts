@@ -9,13 +9,13 @@ import type {
 } from '@/types'
 
 export const clientApi = {
-  getClients: () => requestJson<ClientsResponse>(endpoints.clients),
+  getClients: (init?: RequestInit) => requestJson<ClientsResponse>(endpoints.clients, init),
 
-  getPortfolio: (clientId: string) =>
-    requestJson<PortfolioResponse>(endpoints.portfolio(clientId)),
+  getPortfolio: (clientId: string, init?: RequestInit) =>
+    requestJson<PortfolioResponse>(endpoints.portfolio(clientId), init),
 
-  getPerformance: (clientId: string) =>
-    requestJson<PerformanceResponse>(endpoints.performance(clientId)),
+  getPerformance: (clientId: string, init?: RequestInit) =>
+    requestJson<PerformanceResponse>(endpoints.performance(clientId), init),
 
   markRebalanceReviewed: (clientId: string, body: RebalanceRequest) =>
     requestJson<RebalanceResponse>(endpoints.rebalance(clientId), {

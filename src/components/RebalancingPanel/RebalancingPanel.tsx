@@ -4,6 +4,7 @@ import { Badge } from '@/components/Badge'
 import { Button } from '@/components/Button'
 import { SectionTitle } from '@/components/SectionTitle'
 import { Table } from '@/components/Table'
+import { DRIFT_THRESHOLD_PP } from '@/constants/rebalancing'
 import { recommendationColumns } from './recommendationColumns'
 import styles from './RebalancingPanel.module.css'
 
@@ -14,6 +15,7 @@ interface RebalancingPanelProps {
   rebalanceReviewed: boolean
   onMarkReviewed: () => void
   isPending: boolean
+  errorMessage?: string
 }
 
 export function RebalancingPanel({
@@ -23,6 +25,7 @@ export function RebalancingPanel({
   rebalanceReviewed,
   onMarkReviewed,
   isPending,
+  errorMessage,
 }: RebalancingPanelProps) {
   const showAlert = requiresRebalance && !rebalanceReviewed
 
@@ -37,7 +40,9 @@ export function RebalancingPanel({
       </div>
 
       {drifts.length === 0 ? (
-        <p className={styles.message}>No allocation drift beyond the 5pp threshold.</p>
+        <p className={styles.message}>
+          No allocation drift beyond the {DRIFT_THRESHOLD_PP}pp threshold.
+        </p>
       ) : (
         <ul className={styles.driftList}>
           {drifts.map((drift) => (
@@ -54,11 +59,18 @@ export function RebalancingPanel({
       )}
 
       <Table
+        caption="Suggested buy and sell actions by instrument"
         columns={recommendationColumns}
         rows={recommendations}
-        getRowKey={(row) => `${row.action}-${row.instrument}`}
+        getRowKey={(row, index) => `${row.action}-${row.instrument}-${index}`}
         emptyMessage="No rebalancing recommendations."
       />
+
+      {errorMessage ? (
+        <p className={styles.error} role="alert">
+          {errorMessage}
+        </p>
+      ) : null}
 
       <div className={styles.actions}>
         {rebalanceReviewed ? (

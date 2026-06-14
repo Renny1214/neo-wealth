@@ -12,9 +12,10 @@ export function HoldingsTable({ holdings }: HoldingsTableProps) {
     <div>
       <SectionTitle title="Holdings" subtitle="Instrument-level portfolio breakdown" />
       <Table
+        caption="Portfolio holdings with values and weights"
         columns={holdingsColumns}
         rows={holdings}
-        getRowKey={(row) => `${row.instrument}-${row.assetClass}`}
+        getRowKey={(row, index) => `${row.instrument}-${row.assetClass}-${index}`}
       />
     </div>
   )

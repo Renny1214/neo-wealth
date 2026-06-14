@@ -15,5 +15,5 @@
       "@types/*": ["src/types/*"]
     }
   },
-  "include": ["server"]
+  "include": ["server", "src/constants/rebalancing.ts", "src/types"]
 }

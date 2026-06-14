@@ -27,7 +27,12 @@ export function Select<T extends string>({
         id={id}
         className={styles.select}
         value={value}
-        onChange={(event) => onChange(event.target.value as T)}
+        onChange={(event) => {
+          const nextValue = event.target.value
+          if (options.some((option) => option.value === nextValue)) {
+            onChange(nextValue as T)
+          }
+        }}
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>

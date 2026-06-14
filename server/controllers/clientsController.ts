@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express'
 import type {
+  ApiErrorBody,
   ClientsResponse,
   PerformanceResponse,
   PortfolioResponse,
@@ -12,13 +13,11 @@ import { getPortfolioDetail } from '../services/portfolioService.js'
 import { reviewRebalance } from '../services/rebalanceService.js'
 import { getRouteParam } from '../utils/routeParams.js'
 
-type ErrorBody = { message: string }
-
 export function getClients(_req: Request, res: Response<ClientsResponse>) {
   res.json({ clients: listClientSummaries() })
 }
 
-export function getPortfolio(req: Request, res: Response<PortfolioResponse | ErrorBody>) {
+export function getPortfolio(req: Request, res: Response<PortfolioResponse | ApiErrorBody>) {
   const clientId = getRouteParam(req.params.id)
   const portfolio = getPortfolioDetail(clientId)
 
@@ -30,7 +29,7 @@ export function getPortfolio(req: Request, res: Response<PortfolioResponse | Err
   res.json(portfolio)
 }
 
-export function getPerformance(req: Request, res: Response<PerformanceResponse | ErrorBody>) {
+export function getPerformance(req: Request, res: Response<PerformanceResponse | ApiErrorBody>) {
   const clientId = getRouteParam(req.params.id)
   const performance = getPerformanceSeries(clientId)
 
@@ -42,20 +41,32 @@ export function getPerformance(req: Request, res: Response<PerformanceResponse |
   res.json(performance)
 }
 
-export function postRebalance(req: Request, res: Response<RebalanceResponse | ErrorBody>) {
-  const clientId = getRouteParam(req.params.id)
-  const body = req.body as RebalanceRequest
+function isRebalanceRequest(body: unknown): body is RebalanceRequest {
+  return (
+    typeof body === 'object' &&
+    body !== null &&
+    'action' in body &&
+    (body as RebalanceRequest).action === 'reviewed'
+  )
+}
 
-  if (body.action !== 'reviewed') {
+export function postRebalance(req: Request, res: Response<RebalanceResponse | ApiErrorBody>) {
+  const clientId = getRouteParam(req.params.id)
+
+  if (!isRebalanceRequest(req.body)) {
     res.status(400).json({ message: 'Invalid rebalance action' })
     return
   }
 
   const result = reviewRebalance(clientId)
-  if (!result) {
-    res.status(404).json({ message: `Client not found: ${clientId}` })
+  if (!result.ok) {
+    const message =
+      result.reason === 'client_not_found'
+        ? `Client not found: ${clientId}`
+        : `Portfolio not found for client ${clientId}`
+    res.status(404).json({ message })
     return
   }
 
-  res.json(result)
+  res.json(result.data)
 }

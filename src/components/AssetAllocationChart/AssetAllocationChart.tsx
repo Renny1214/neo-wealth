@@ -25,7 +25,7 @@ export function AssetAllocationChart({ allocation }: AssetAllocationChartProps) 
   return (
     <div>
       <SectionTitle title="Asset Allocation" subtitle="Current portfolio mix" />
-      <div className={styles.chart}>
+      <div className={styles.chart} role="img" aria-label="Donut chart of current asset allocation">
         <ResponsiveContainer width="100%" height={260}>
           <PieChart>
             <Pie

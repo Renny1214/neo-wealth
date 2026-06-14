@@ -7,6 +7,7 @@ import { LoadingState } from '@/components/LoadingState'
 import { PageHeader } from '@/components/PageHeader'
 import { useClientOverview } from '@/hooks/useClientOverview'
 import { useClients } from '@/hooks/useClients'
+import { getErrorMessage } from '@/utils/getErrorMessage'
 import styles from './ClientOverviewPage.module.css'
 
 export function ClientOverviewPage() {
@@ -21,7 +22,7 @@ export function ClientOverviewPage() {
   if (error) {
     return (
       <ErrorState
-        message={error instanceof Error ? error.message : 'Failed to load clients'}
+        message={getErrorMessage(error, 'Failed to load clients')}
         onRetry={() => void refetch()}
       />
     )

@@ -1,6 +1,5 @@
 import type { AllocationItem, DriftItem, DriftStatus } from '../../src/types/portfolio.js'
-
-export const DRIFT_THRESHOLD = 5
+import { DRIFT_THRESHOLD_PP } from '../../src/constants/rebalancing.js'
 
 function toDriftStatus(drift: number): DriftStatus {
   return drift > 0 ? 'overweight' : 'underweight'
@@ -9,7 +8,7 @@ function toDriftStatus(drift: number): DriftStatus {
 export function calculateDrifts(allocation: AllocationItem[]): DriftItem[] {
   return allocation.flatMap((item) => {
     const drift = Number((item.currentPct - item.targetPct).toFixed(1))
-    if (Math.abs(drift) <= DRIFT_THRESHOLD) return []
+    if (Math.abs(drift) <= DRIFT_THRESHOLD_PP) return []
 
     return [{
       assetClass: item.assetClass,

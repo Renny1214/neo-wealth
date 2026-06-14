@@ -12,7 +12,7 @@ import type {
 const portfolioSeed = portfoliosSeed as PortfolioStore
 const performanceData = performanceSeed as PerformanceStore
 
-let portfolios: PortfolioStore = structuredClone(portfolioSeed)
+const portfolios: PortfolioStore = structuredClone(portfolioSeed)
 
 export function getClientRecords(): ClientRecord[] {
   return clientsSeed as ClientRecord[]
