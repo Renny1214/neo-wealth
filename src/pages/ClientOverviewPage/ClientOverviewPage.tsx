@@ -1,13 +1,18 @@
-import { Link } from 'react-router-dom'
 import { Card } from '@/components/Card'
+import { ClientFilters } from '@/components/ClientFilters'
+import { ClientList } from '@/components/ClientList'
+import { ClientSortControls } from '@/components/ClientSortControls'
 import { ErrorState } from '@/components/ErrorState'
 import { LoadingState } from '@/components/LoadingState'
 import { PageHeader } from '@/components/PageHeader'
+import { useClientOverview } from '@/hooks/useClientOverview'
 import { useClients } from '@/hooks/useClients'
 import styles from './ClientOverviewPage.module.css'
 
 export function ClientOverviewPage() {
   const { data, error, isLoading, refetch } = useClients()
+  const clients = data?.clients ?? []
+  const { sortBy, setSortBy, filter, setFilter, visibleClients } = useClientOverview(clients)
 
   if (isLoading) {
     return <LoadingState message="Loading client portfolios…" />
@@ -22,26 +27,24 @@ export function ClientOverviewPage() {
     )
   }
 
-  const clients = data?.clients ?? []
-
   return (
     <section>
       <PageHeader
         title="Client Portfolio Overview"
         subtitle="Morning snapshot of assigned HNI client portfolios"
       />
-      {clients.length === 0 ? (
+
+      <div className={styles.toolbar}>
+        <ClientFilters value={filter} onChange={setFilter} />
+        <ClientSortControls value={sortBy} onChange={setSortBy} />
+      </div>
+
+      {visibleClients.length === 0 ? (
         <Card>
-          <p className={styles.empty}>No clients loaded yet. Mock data arrives in Phase 2.</p>
+          <p className={styles.empty}>No clients match the selected filter.</p>
         </Card>
       ) : (
-        <ul className={styles.list}>
-          {clients.map((client) => (
-            <li key={client.id}>
-              <Link to={`/clients/${client.id}`}>{client.name}</Link>
-            </li>
-          ))}
-        </ul>
+        <ClientList clients={visibleClients} />
       )}
     </section>
   )

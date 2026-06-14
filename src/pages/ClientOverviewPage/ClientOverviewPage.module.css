@@ -1,11 +1,14 @@
+.toolbar {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
 .empty {
   color: var(--color-muted-text);
   margin: 0;
   text-align: center;
-}
-
-.list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }

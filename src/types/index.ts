@@ -1,4 +1,4 @@
-export type { ClientFilterValue, ClientSortField, ClientSummary, RiskProfile } from './client'
+export type { ClientFilterValue, ClientSortField, ClientSummary, Currency, RiskProfile } from './client'
 export type {
   AllocationItem,
   AssetClass,
